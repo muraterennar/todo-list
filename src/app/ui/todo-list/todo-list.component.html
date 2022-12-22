@@ -6,35 +6,43 @@
 
 <div class="container">
     <div class="row d-flex justify-content-center mt-5">
-        <div class="col-sm-1 col-md-1 col-lg-1 bg-secondary p-3 w-75 rounded rounded-2 text-white">
+        <div class="col-sm-1 col-md-1 col-lg-1 bg-light  p-3 w-75 rounded rounded-2 text-white">
             <div class="d-flex justify-content-between p-2 form-check">
-                <div class="row g-3 align-items-center ">
-                    <div class="col-auto">
-                        <label for="inputText"  class="col-form-label">+ Yapılcak Ekle</label>
-                    </div>
+                <div class="row g-3 align-items-center me-2">
                     <div class="col-auto">
                         <input type="text" id="inputText" class="form-control" aria-describedby="texHelpInline" [(ngModel)]="todoTitle">
                     </div>
                 </div>
                 <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
-
             </div>
         </div>
 
     </div>
 </div>
 
-<hr class="mt-5 border border-2 opacity-50 border-primary w-75 m-auto rounded rounded-2">
+<hr class="mt-5 border border-1 opacity-100 border-dark w-75 m-auto rounded rounded-2">
 
-<div class="container">
+<!-- <div class="container">
     <div class="row d-flex justify-content-center mt-5">
         <div class="col-sm-1 col-md-1 col-lg-1 bg-secondary p-3 w-75 rounded rounded-2 text-white">
-            <div class="d-flex justify-content-between p-2 text-center " *ngFor="let data of datas">
+            <div class="d-flex justify-content-between p-2 text-center" *ngFor="let data of datas">
                 <h4 [class]="addClass()">{{data.todoTitle}}</h4>
                 <input class="form-check-input btn-outline-success fs-4" type="checkbox" [checked]="data.todoBool" (click)="check(data)" id="flexCheckDefault">
                 <button type="button" class="btn btn-outline-danger" (click)="delete(data.id)" >Sil</button>
             </div>
         </div>
 
+    </div>
+</div> -->
+
+<div class="container mt-5">
+    <div class="card mb-5 bg-dark text-white rounded rounded-2 w-75 m-auto" *ngFor="let data of datas">
+        <div class="card-body d-flex justify-content-between">
+            <span [class]="addClass(data.todoBool)" class="text-center my-auto fs-6">{{data.todoTitle}}</span>
+            <div>
+                <input class="form-check-input btn-outline-success fs-4 me-3" type="checkbox" [checked]="data.todoBool" (click)="check(data)" id="flexCheckDefault">
+                <button type="button" class="btn btn-danger my-auto" (click)="delete(data.id)">Sil</button>
+            </div>
+        </div>
     </div>
 </div>

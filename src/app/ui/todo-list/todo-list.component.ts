@@ -17,7 +17,7 @@ export class TodoListComponent implements OnInit {
   datas: any;
   setData: ToDoModel;
   public todoTitle: string
-  dataLoaded: boolean = false;
+  // dataLoaded: boolean = false
 
   ngOnInit(): void {
     this.getAll();
@@ -78,22 +78,20 @@ export class TodoListComponent implements OnInit {
     if (data.todoBool == false) {
       data.todoBool = true;
       this.patch(data);
-      this.dataLoaded = true
       console.log(data)
     }
     else {
       data.todoBool = false;
-      this.dataLoaded = false;
       this.patch(data);
       console.log(data);
     }
   }
 
-  addClass(){
-    if (this.dataLoaded == true) {
+  addClass(status: boolean) {
+    if (status == true) {
       return 'text-decoration-line-through';
     }
-    else{
+    else {
       return '';
     }
   }

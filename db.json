@@ -3,37 +3,17 @@
     {
       "id": 1,
       "todoBool": false,
-      "todoTitle": "Abc"
+      "todoTitle": "Portfolio"
     },
     {
       "id": 2,
       "todoBool": false,
-      "todoTitle": "Abcaasdasd"
+      "todoTitle": "Butik Tasrım"
     },
     {
       "id": 3,
       "todoBool": false,
-      "todoTitle": "asdasdafdbfASDASd"
-    },
-    {
-      "id": 4,
-      "todoBool": false,
-      "todoTitle": "asdasd"
-    },
-    {
-      "id": 5,
-      "todoBool": false,
-      "todoTitle": "Merhaba Dünya"
-    },
-    {
-      "id": 6,
-      "todoBool": false,
-      "todoTitle": "asdasdasd"
-    },
-    {
-      "id": 7,
-      "todoBool": false,
-      "todoTitle": "ASDASd"
+      "todoTitle": "DENEME"
     }
   ]
 }
