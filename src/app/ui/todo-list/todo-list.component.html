@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" aria-current="page">Todo</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-sm-1 col-md-1 col-lg-1 bg-secondary p-3 w-75 rounded rounded-2 text-white">
+            <div class="d-flex justify-content-between p-2 form-check">
+                <div class="row g-3 align-items-center ">
+                    <div class="col-auto">
+                        <label for="inputText"  class="col-form-label">+ Yapılcak Ekle</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" id="inputText" class="form-control" aria-describedby="texHelpInline" [(ngModel)]="todoTitle">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success" (click)="add()">Ekle</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<hr class="mt-5 border border-2 opacity-50 border-primary w-75 m-auto rounded rounded-2">
+
+<div class="container">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-sm-1 col-md-1 col-lg-1 bg-secondary p-3 w-75 rounded rounded-2 text-white">
+            <div class="d-flex justify-content-between p-2 text-center " *ngFor="let data of datas">
+                <h4 [class]="addClass()">{{data.todoTitle}}</h4>
+                <input class="form-check-input btn-outline-success fs-4" type="checkbox" [checked]="data.todoBool" (click)="check(data)" id="flexCheckDefault">
+                <button type="button" class="btn btn-outline-danger" (click)="delete(data.id)" >Sil</button>
+            </div>
+        </div>
+
+    </div>
+</div>
